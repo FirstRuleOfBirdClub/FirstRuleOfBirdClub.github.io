@@ -51,7 +51,8 @@ body {
     transition: transform 0.3s ease; /* Added transition */
 }
 
-.social-links a:hover {
+.social-links a:hover,
+.social-links a:active {
     transform: scale(1.15); /* Magnification on hover */
 }
 
@@ -79,6 +80,13 @@ body {
     text-decoration: none;
     color: inherit;
     transition: transform 0.3s ease;
+}
+
+/* Magnification on hover and active for link items */
+.link-item:hover,
+.link-item:active {
+    /* Added :active */
+    transform: scale(1.05);
 }
 
 /* Style adjustment for non-clickable items */
