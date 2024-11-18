@@ -107,12 +107,12 @@ body {
 }
 
 /* Remove underline from the link item completely */
-.link-item:link,
+/* .link-item:link,
 .link-item:visited,
 .link-item:active {
     text-decoration: none;
     color: inherit;
-}
+} */
 
 /* Ensure no underline or blue color on text elements inside */
 .link-item h2,
@@ -158,6 +158,23 @@ footer a:hover {
 }
 
 /* Magnification on hover for link items */
-.link-item:hover {
+.link-item:hover,
+.link-item:active {
     transform: scale(1.05);
+}
+
+/* Magnification on hover and active for link items (desktop only) */
+.link-item:hover,
+.link-item:active {
+    transform: scale(1.05);
+}
+
+/* Disable hover effects on touch devices */
+@media (hover: none) {
+    .link-item:hover,
+    .link-item:active,
+    .social-links a:hover,
+    .social-links a:active {
+        transform: none; /* No scaling on touch */
+    }
 }
